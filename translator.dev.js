@@ -1,3 +1,9 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.translate = void 0;
 // 1. Input #1 Morse -- gives an english output
 // 2. Or it will be english letters which makes morse the output
 // 3. Validate the input (is it valid morse? is it valid english?)
@@ -8,105 +14,24 @@
 //      option #3 - ascii lookup
 //      option #4 - two switch cases of 26 cases
 // 6. Display this translate on the page
+var englishAlphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", " ", " ", "", ""];
+var morseAlphabet = [".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--..", ".----", "..---", "...--", "....-", ".....", "-....", "--...", "---..", "----.", "-----", "+", " ", "", "/"];
 
-const englishAlphabet = [
-  "a",
-  "b",
-  "c",
-  "d",
-  "e",
-  "f",
-  "g",
-  "h",
-  "i",
-  "j",
-  "k",
-  "l",
-  "m",
-  "n",
-  "o",
-  "p",
-  "q",
-  "r",
-  "s",
-  "t",
-  "u",
-  "v",
-  "w",
-  "x",
-  "y",
-  "z",
-  "1",
-  "2",
-  "3",
-  "4",
-  "5",
-  "6",
-  "7",
-  "8",
-  "9",
-  "0",
-  " ",
-  " ",
-  "",
-  ""
-];
+var translate = function translate(input) {
+  var inputLanguage;
 
-const morseAlphabet = [
-  ".-",
-  "-...",
-  "-.-.",
-  "-..",
-  ".",
-  "..-.",
-  "--.",
-  "....",
-  "..",
-  ".---",
-  "-.-",
-  ".-..",
-  "--",
-  "-.",
-  "---",
-  ".--.",
-  "--.-",
-  ".-.",
-  "...",
-  "-",
-  "..-",
-  "...-",
-  ".--",
-  "-..-",
-  "-.--",
-  "--..",
-  ".----",
-  "..---",
-  "...--",
-  "....-",
-  ".....",
-  "-....",
-  "--...",
-  "---..",
-  "----.",
-  "-----",
-  "+",
-  " ",
-  "",
-  "/"
-];
-
-export const translate = (input) => {
-  let inputLanguage;
   if (input.includes(".") || input.includes("-")) {
     inputLanguage = "morse";
   } else {
     inputLanguage = "english";
   }
+
   if (inputLanguage == "morse") {
     if (input.includes("/")) {
-      const morseArr = input.split("/");
-      const morseToEnglishArr = morseArr.map((character) => {
-        const morsePosition = morseAlphabet.indexOf(character);
+      var morseArr = input.split("/");
+      var morseToEnglishArr = morseArr.map(function (character) {
+        var morsePosition = morseAlphabet.indexOf(character);
+
         if (morsePosition != -1) {
           return englishAlphabet[morsePosition];
         } else {
@@ -115,7 +40,8 @@ export const translate = (input) => {
       });
       return morseToEnglishArr.join("");
     } else {
-      const morsePosition = morseAlphabet.indexOf(input);
+      var morsePosition = morseAlphabet.indexOf(input);
+
       if (morsePosition != -1) {
         return englishAlphabet[morsePosition];
       } else {
@@ -123,9 +49,10 @@ export const translate = (input) => {
       }
     }
   } else if (inputLanguage == "english") {
-    const englishArr = input.toLowerCase().split("");
-    const englishToMorseArr = englishArr.map((character) => {
-      const englishPosition = englishAlphabet.indexOf(character);
+    var englishArr = input.toLowerCase().split("");
+    var englishToMorseArr = englishArr.map(function (character) {
+      var englishPosition = englishAlphabet.indexOf(character);
+
       if (englishPosition != -1) {
         return morseAlphabet[englishPosition];
       } else {
@@ -137,3 +64,5 @@ export const translate = (input) => {
     return "invalid input";
   }
 };
+
+exports.translate = translate;

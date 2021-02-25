@@ -2,36 +2,36 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kiki's Translator</title>
     <script type="module" src="script.js" async defer></script>
     <script type="module" src="translator.js" async defer></script>
     <link rel="stylesheet" href="./assets/styles.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
-</head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap"
+      rel="stylesheet"
+    />
+  </head>
   <body>
     <div class="title">
-      <h2 id="horizontal">English to Morse Code</h2>
+      <div id="horizontal">
+        <h2>English to Morse Code</h2>
+      </div>
       <h2 id="vertical">Translator</h2>
     </div>
     <main>
-    <div class="translate">
-      <div class="inputLanguage" id="english">
-        <label id="englishLabel">Enter English here...</label>
-        <textarea id="englishInput" type="text"></textarea>
-        <button id="translateEnglish">Translate to Morse!</button>
+      <div class="translate">
+        <label id="inputLabel">Enter your text here...</label>
+        <textarea
+          id="input"
+          placeholder="When typing in morse, use '/' between characters and '/+/' between words"
+        ></textarea>
       </div>
-      <div class="inputLanguage" id="morse">
-        <label id="morseLabel">Enter Morse here...</label>
-        <textarea id="morseInput" type="text" placeholder="Between characters use '//' and between words use '+'"></textarea> 
-        <button id="translateMorse">Translate to English!</button>
+      <div class="output">
+        <label id="outputLabel">Your translated message...</label>
+        <div id="output"></div>
       </div>
-    </div>
-    <div class="output">
-    <label id="outputLabel">Your translated message...</label>
-    <div id="output"></div>
-  </div>
-  </main>
-  </body> 
+    </main>
+  </body>
 </html>
