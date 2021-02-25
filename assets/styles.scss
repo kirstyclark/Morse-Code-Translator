@@ -1,0 +1,107 @@
+@import './_variables';
+@import './_typography';
+
+* {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+}
+
+;
+
+body {
+    background-color: $mainColor;
+    color: $highlightColor;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .title {
+        padding: 20px;
+        margin: 30px;
+
+        #horizontal {
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: $secondaryColor;
+        }
+
+        #vertical {
+            position: absolute;
+            right: 0;
+            top: 0;
+            writing-mode: vertical-rl;
+            color: $highlightColor;
+        }
+    }
+
+    main {
+        width: 80vw;
+        height: 70vh;
+        margin-right: 60px;
+        margin-top: 40px;
+
+        .translate {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+
+            .inputLanguage {
+                margin: 20px;
+                display: flex;
+                flex-direction: column;
+
+                button {
+                    margin-top: 30px;
+                    width: 190px;
+                    height: 40px;
+                }
+
+                button:hover {
+                    background-color: $highlightColor;
+                    cursor: pointer;
+                }
+
+                textarea {
+                    height: 100px;
+                    width: 350px;
+                    background-color: $mainColor;
+                    border: $secondaryColor solid 2px;
+                    padding: 20px;
+                    margin-top: 10px;
+                    
+                }
+    
+                textarea:hover {
+                    cursor: pointer;
+                }
+    
+                textarea:focus {
+                    background-color: $highlightColor;
+                    color: $mainColor;
+                }
+            }
+        }
+
+        .output {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            #output {
+                height: 100px;
+                width: 500px;
+                background-color: $mainColor;
+                border: $secondaryColor solid 2px;
+                padding: 20px;
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+;
