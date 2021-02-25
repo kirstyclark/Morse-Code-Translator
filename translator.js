@@ -1,14 +1,3 @@
-// 1. Input #1 Morse -- gives an english output
-// 2. Or it will be english letters which makes morse the output
-// 3. Validate the input (is it valid morse? is it valid english?)
-// 4. Validate the input (empty inputs, what else)
-// 5. We need to translate this inut to the output language
-//      option #1 - store two arrays of 26 values, find the index of one and then find the other
-//      option #2 - have an object of keyvalues, letters are keys, values are morse
-//      option #3 - ascii lookup
-//      option #4 - two switch cases of 26 cases
-// 6. Display this translate on the page
-
 const englishAlphabet = [
   "a",
   "b",
