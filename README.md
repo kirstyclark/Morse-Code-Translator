@@ -15,6 +15,6 @@ This project was created with test-driven development methodology in mind - all 
 <img width="900" alt="Screenshot 2021-04-13 at 19 40 51" src="https://user-images.githubusercontent.com/77169410/114603990-5037f400-9c90-11eb-8847-88a68d671293.png">
 
 ## How to use
-- Open in your browser; https://kirstyclark.github.io/morseTranslator/
+- Open in your browser; https://kirstyclark.github.io/Morse-Code-Translator/
 - Enter text into the lefthand field, can be either english or morse
 - Watch your message be translated in real time in the righthand box!
